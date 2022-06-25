@@ -13,7 +13,7 @@ export default function Event() {
       <main className="flex flex-1">
         { slug 
         ? <Video lessonSlug={slug}/> 
-        : <div className="flex-1 bg-green-300" />}
+        : <div className="flex-1" />}
         <Sidebar />
       </main>
     </div>
