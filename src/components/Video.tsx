@@ -23,8 +23,10 @@ export default function Video(props: VideoProps) {
 
   if (!data || !data.lesson) {
     return (
-      <div className="flex-1">
-        <p>Carregando...</p>
+      <div className="flex-1 flex justify-center">
+        <div className="flex items-center mb-8">
+          <p className="text-3xl">Carregando...</p>
+        </div>
       </div>
     );
   }
@@ -43,9 +45,7 @@ export default function Video(props: VideoProps) {
       <div className="p-8 max-w-[1100px] mx-auto">
         <div className="flex items-start gap-16 flex flex-col lg:flex-row">
           <div className="flex-1">
-            <h1 className="text-2xl font-bold ">
-              {data.lesson.title}
-            </h1>
+            <h1 className="text-2xl font-bold ">{data.lesson.title}</h1>
             <p className="mt-4 text-gray-200 leading-relaxed">
               {data.lesson.description}
             </p>
