@@ -35,6 +35,7 @@ export default function Lesson(props: LessonProps) {
           }
         )}
       >
+
         <header className="flex items-center justify-between">
           {isLessonAvailable ? (
             <span
@@ -55,10 +56,15 @@ export default function Lesson(props: LessonProps) {
               Em breve
             </span>
           )}
-          <span className={classnames("text-xs rounded py-[0.125rem] px-2 text-white border ", {
-            'border-white' : isActiveLesson,
-            'border-green-300' : !isActiveLesson
-          })}>
+          <span
+            className={classnames(
+              "text-xs rounded py-[0.125rem] px-2 text-white border ",
+              {
+                "border-white": isActiveLesson,
+                "border-green-300": !isActiveLesson,
+              }
+            )}
+          >
             {props.type === "live" ? "AO VIVO" : "AULA PRÁTICA"}
           </span>
         </header>
